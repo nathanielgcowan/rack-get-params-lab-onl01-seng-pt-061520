@@ -26,6 +26,7 @@ class Application
         added_item = req.params["item"]
         if @@items.include? added_item
           @@items << added_item
+          resp.write "added #{item}"
         else 
           resp.write "We don't have that item"
         end 
